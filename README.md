@@ -8,11 +8,11 @@
 
 Розумне освітлення на **ESP8266 + WS2812B** з Android-застосунком, локальним Web UI та світломузикою.
 
-[![ESP8266](https://img.shields.io/badge/ESP8266-v7.5.18-14532d?style=for-the-badge)](https://github.com/Gostin0/Led-Lamp/releases/tag/1.4.6)
-[![Android](https://img.shields.io/badge/Android-v1.4.6-166534?style=for-the-badge)](https://github.com/Gostin0/Led-Lamp/releases/tag/1.4.6)
+[![ESP8266](https://img.shields.io/badge/ESP8266-v7.5.18-14532d?style=for-the-badge)](https://github.com/Gostin0/Led-Lamp/releases/tag/1.4.7)
+[![Android](https://img.shields.io/badge/Android-v1.4.7-166534?style=for-the-badge)](https://github.com/Gostin0/Led-Lamp/releases/tag/1.4.7)
 [![WS2812B](https://img.shields.io/badge/LED-WS2812B-15803d?style=for-the-badge)](https://github.com/Gostin0/Led-Lamp)
 
-[**⬇ Завантажити актуальну версію**](https://github.com/Gostin0/Led-Lamp/releases/tag/1.4.6) · [**📝 Історія змін**](CHANGELOG.md) · [**🐞 Повідомити про проблему**](https://github.com/Gostin0/Led-Lamp/issues)
+[**⬇ Завантажити актуальну версію**](https://github.com/Gostin0/Led-Lamp/releases/tag/1.4.7) · [**📝 Історія змін**](CHANGELOG.md) · [**🐞 Повідомити про проблему**](https://github.com/Gostin0/Led-Lamp/issues)
 
 </div>
 
@@ -27,12 +27,12 @@
 | Компонент | Версія / статус |
 |---|---|
 | Прошивка ESP8266 | **7.5.18-BOOT-SCAN-RC1** |
-| Android | **1.4.6** (`versionCode 1406`) |
+| Android | **1.4.7** (`versionCode 1407`) |
 | Web UI | Базовий Web із OTA-пакета v7.5.18 |
-| Випуск | [GitHub Release `1.4.6`](https://github.com/Gostin0/Led-Lamp/releases/tag/1.4.6) |
+| Випуск | [GitHub Release `1.4.7`](https://github.com/Gostin0/Led-Lamp/releases/tag/1.4.7) |
 
 > [!NOTE]
-> **Forest Glass** — окремий експериментальний редизайн Web UI. Він **не входить** в офіційний OTA-комплект 1.4.6. Повне фізичне тестування OTA саме опублікованого комплекту не заявляється.
+> **Forest Glass** входить до Web-файлів комплекту 1.4.7. Це оновлення інтерфейсу ще потребує повної апаратної перевірки, особливо під навантаженням ESP8266; повне фізичне OTA-тестування опублікованого пакета не заявляється.
 
 ## Можливості
 
@@ -47,11 +47,13 @@
 | 🌐 Web UI | Український вебінтерфейс, параметри, LittleFS і Wi-Fi Setup |
 | 🔧 Обслуговування | OTA, Recovery на порту **81**, налаштування мережі |
 
-**Quick Settings Tile (Android 1.4.6):** плитка в шторці перемикає лампу; під час увімкнення вибирає **White Light**. Якщо лампа вже увімкнена, перше натискання її вимикає.
+**Quick Settings Tile (Android 1.4.7):** плитка в шторці перемикає лампу; під час увімкнення вибирає **White Light**. Якщо лампа вже увімкнена, перше натискання її вимикає.
 
 **Wi-Fi BOOT SCAN (ESP 7.5.18):** список до 12 мереж формується **один раз при запуску** ESP та читається Android і Wi-Fi Setup із кешу. Для оновлення списку перезавантаж ESP8266; натискання «Знайти Wi-Fi» не запускає нове радіосканування.
 
 **Вилучені можливості:** SHOW Studio та XM Player не входять до поточного комплекту.
+
+**Android 1.4.7:** виправлено Wi-Fi-вікно (прокрутка, компактні секції, доступне збереження з відкритою клавіатурою) і вбудовано актуальний Forest Web у відновлення LittleFS.
 
 ## Завантаження
 
@@ -59,9 +61,9 @@
 
 | Файл | Призначення |
 |---|---|
-| [`LED-Lampa.apk`](https://github.com/Gostin0/Led-Lamp/releases/download/1.4.6/LED-Lampa.apk) | Підписаний Android v1.4.6 |
-| [`esp-release.zip`](https://github.com/Gostin0/Led-Lamp/releases/download/1.4.6/esp-release.zip) | Firmware, OTA-маніфест і шість файлів Web/Wi-Fi Setup |
-| [`SHA256SUMS.txt`](https://github.com/Gostin0/Led-Lamp/releases/download/1.4.6/SHA256SUMS.txt) | Контрольні SHA-256 |
+| [`LED-Lampa.apk`](https://github.com/Gostin0/Led-Lamp/releases/download/1.4.7/LED-Lampa.apk) | Підписаний Android v1.4.7 |
+| [`esp-release.zip`](https://github.com/Gostin0/Led-Lamp/releases/download/1.4.7/esp-release.zip) | Firmware, OTA-маніфест і сім файлів Web/Wi-Fi Setup (Forest Web із `forest.jpg`) |
+| [`SHA256SUMS.txt`](https://github.com/Gostin0/Led-Lamp/releases/download/1.4.7/SHA256SUMS.txt) | Контрольні SHA-256 |
 
 > [!IMPORTANT]
 > Перед оновленням ESP збережи налаштування, перевір доступ до Recovery та не вимикай живлення під час OTA. Для встановлення нового APK **поверх попереднього** потрібен той самий сертифікат підпису і вищий `versionCode`.
@@ -77,11 +79,13 @@
 
 | Реліз | ESP8266 | Головна тема | Опис |
 |---|---|---|---|
-| [**Android 1.4.6**](https://github.com/Gostin0/Led-Lamp/releases/tag/1.4.6) | **7.5.18** | White Light у шторці, BOOT SCAN і зменшення навантаження | [Деталі](release-notes/1.4.6.md) |
+| [**Android 1.4.7**](https://github.com/Gostin0/Led-Lamp/releases/tag/1.4.7) | **7.5.18** | Wi-Fi-вікно, Forest Web, BOOT SCAN і White Light у шторці | [Деталі](release-notes/1.4.7.md) |
 | [Android 1.3.0](https://github.com/Gostin0/Led-Lamp/releases/tag/1.3.0) | 7.5.15 | SMART LIGHT, будильники, анімація | [Деталі](release-notes/1.3.0.md) |
 | [Android 1.2.0](https://github.com/Gostin0/Led-Lamp/releases/tag/v1.2.0) | 7.5.0-WEB-DEV1 | Попередня тестова Web/Android інтеграція | [Деталі](release-notes/v1.2.0.md) |
 
-У кожного релізу **свій історичний OTA-пакет**; не змішуй APK та `esp-release.zip` з різних версій.
+Збірка **Android 1.4.6** була проміжною версією: [історія змін](release-notes/1.4.6.md). Окремого GitHub Release із тегом `1.4.6` зараз немає.
+
+У кожного опублікованого релізу **свій OTA-пакет**; не змішуй APK та `esp-release.zip` з різних версій.
 
 Докладніше — [CHANGELOG.md](CHANGELOG.md). Архівний опис [Android 1.3.0](RELEASE_NOTES_v1.3.0.md).
 
