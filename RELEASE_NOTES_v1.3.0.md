@@ -10,6 +10,6 @@
 
 **Файли цього історичного релізу:** `LED-Lampa.apk`, `esp-release.zip`, `SHA256SUMS.txt`.
 
-[Відкрити реліз 1.3.0](https://github.com/Gostin0/Led-Lamp/releases/tag/1.3.0) · [Актуальна версія](https://github.com/Gostin0/Led-Lamp/releases/tag/1.4.6) · [Історія змін](CHANGELOG.md)
+[Відкрити реліз 1.3.0](https://github.com/Gostin0/Led-Lamp/releases/tag/1.3.0) · [Актуальна версія](https://github.com/Gostin0/Led-Lamp/releases/tag/1.4.7) · [Історія змін](CHANGELOG.md)
 
 > Повні апаратні випробування саме цього релізного комплекту не задокументовані. Перед OTA збережи конфігурацію. APK та OTA-пакет бери з **одного** релізу.
